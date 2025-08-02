@@ -1,0 +1,165 @@
+/* Estilos gerais do corpo da página */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #0a0a0a, #1a1a1a); /* Gradiente de fundo do site */
+  color: #f0f0f0; /* Cor do texto */
+}
+
+/* Estilos para o cabeçalho */
+header {
+  background-color: #121212; /* Cor de fundo do cabeçalho */
+  display: flex;
+  justify-content: space-between; /* Organiza os itens do cabeçalho (logo e WhatsApp) */
+  align-items: center;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Estilos para o logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+}
+
+.logo h1 {
+  font-size: 1.5rem;
+  color: #f0f0f0;
+  margin: 0;
+}
+
+/* Estilos para o ícone do WhatsApp */
+.whatsapp-link img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Estilos para o conteúdo principal */
+.content {
+  padding: 2rem;
+  animation: fadeIn 1s ease-out;
+  margin-bottom: 100px; /* Adiciona espaçamento para o botão do WhatsApp não sobrepor o rodapé */
+}
+
+/* Estilos para a seção de informações */
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+/* Estilos para a coluna da esquerda */
+.texto-esquerdo {
+  flex: 2;
+}
+
+.texto-esquerdo h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.texto-esquerdo p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Estilos para a imagem abaixo do texto */
+.imagem-baixo img {
+  width: 100%;
+  max-width: 400px;
+  margin-top: 1rem;
+  border-radius: 8px;
+}
+
+/* Estilos para a coluna da direita */
+.texto-direito {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.texto-direito p {
+  font-size: 1rem;
+}
+
+/* Estilos para o botão centralizado */
+.botao-central {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* Estilos para o botão de WhatsApp */
+.btn-chamada {
+  background-color: #25D366; /* Cor do botão */
+  color: #fff; /* Cor do texto do botão */
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  animation: pulse 2s infinite;
+  display: inline-block;
+}
+
+/* Estilos para o botão quando o mouse passa por cima */
+.btn-chamada:hover {
+  background-color: #1ebc59;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #25D366;
+}
+
+/* Estilos para o rodapé */
+footer {
+  background-color: #1c1c1c;
+  padding: 1rem;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  color: #aaa;
+}
+
+/* Animação de fade-in para o conteúdo */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animação de pulso para o botão */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .info {
+    flex-direction: column;
+  }
+
+  .texto-direito {
+    justify-content: center;
+  }
+}
